@@ -1,0 +1,29 @@
+# Step 1 - Import libraries
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+
+# Step 2 - Load dataset
+df = pd.read_csv("data.csv")
+
+# Step 3 - Show first 5 rows
+print(df.head())
+
+# Step 4 - Check missing values
+print(df.isnull().sum())
+
+# Step 5 - Statistical information
+print(df.describe())
+
+# Step 6 - Check shape
+print(df.shape)
+
+# Step 7 - Check data types
+print(df.dtypes)
+
+# Step 8 - Convert categorical to numeric
+le = LabelEncoder()
+
+df['Sex'] = le.fit_transform(df['Sex'])
+
+# Step 9 - Show updated data
+print(df.head())
