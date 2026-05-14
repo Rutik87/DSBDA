@@ -1,0 +1,19 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset('titanic')
+
+df.head()
+
+# Count plot
+sns.countplot(x='survived', data=df)
+
+plt.show()
+
+# Histogram for fare
+plt.hist(df['fare'])
+
+plt.xlabel("Fare")
+plt.ylabel("Passengers")
+
+plt.show()
