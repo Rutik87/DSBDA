@@ -1,0 +1,19 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset('iris')
+
+df.head()
+
+df.dtypes
+
+# Histogram
+df.hist()
+
+plt.show()
+
+# Boxplot
+sns.boxplot(data=df)
+
+plt.show()
